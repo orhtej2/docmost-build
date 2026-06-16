@@ -62,7 +62,7 @@ jobs:
         id: check_build
         run: |
           ASSET_NAME="docmost.tar.gz"
-          ASSET_EXISTS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases/${{ steps.get_release_id.outputs.get_release_id }}/assets | jq ".[] | select(.name==\"${ASSET_NAME}\") | .name")
+          ASSET_EXISTS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases/${{ steps.get_release_id.outputs.RELEASE_ID }}/assets | jq ".[] | select(.name==\"${ASSET_NAME}\") | .name")
           if [ "$ASSET_EXISTS" = "\"$ASSET_NAME\"" ]; then
             echo "Asset already exists, skipping extraction and upload"
             echo "NEEDS_TO_BUILD=false" >> $GITHUB_OUTPUT
