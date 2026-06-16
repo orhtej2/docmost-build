@@ -106,7 +106,7 @@ jobs:
           mv packages/editor-ext/package.json docmost/packages/editor-ext/package.json
 
           mv package.json docmost/package.json
-          mv/pnpm*.yaml docmost/
+          mv pnpm*.yaml docmost/
           mv .npmrc docmost/.npmrc
 
           mv patches docmost/patches
