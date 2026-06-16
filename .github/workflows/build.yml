@@ -37,7 +37,7 @@ jobs:
           fi
 
       - name: Create Release
-        if:  steps.check_release.outputs.exist == 'false'
+        if:  steps.check_release.outputs.exists == 'false'
         id: create_release
         uses: softprops/action-gh-release@v2
         env:
