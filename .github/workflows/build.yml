@@ -44,7 +44,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.get_version.outputs.RELEASE_VERSION }}
-          name:Prebuilt ${{ steps.get_version.outputs.RELEASE_VERSION }}
+          name: Prebuilt ${{ steps.get_version.outputs.RELEASE_VERSION }}
           body: |
             This release contains prebuilts for Docmost.
             Original release: https://github.com/docmost/docmost/releases/tag/${{ steps.get_version.outputs.RELEASE_VERSION }}
