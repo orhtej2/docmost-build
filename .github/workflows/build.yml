@@ -3,7 +3,7 @@ name: Build Docmost release
 on:
   workflow_dispatch:
   schedule:
-    - cron: '6 * * * *'  
+    - cron: '0 18 * * *'  
 
 permissions:
   contents: write
