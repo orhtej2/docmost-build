@@ -78,7 +78,7 @@ jobs:
     if: needs.check-and-prepare.outputs.needs_to_build == 'true'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - uses: pnpm/action-setup@v6
