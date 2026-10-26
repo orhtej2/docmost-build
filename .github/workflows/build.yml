@@ -101,6 +101,7 @@ jobs:
           mkdir -p docmost/packages/editor-ext
           mv apps/server/dist docmost/apps/server/dist
           mv apps/client/dist docmost/apps/client/dist
+          mv apps/client/package.json docmost/apps/client/package.json
           mv apps/server/package.json docmost/apps/server/package.json
 
           mv packages/editor-ext/dist docmost/packages/editor-ext/dist
